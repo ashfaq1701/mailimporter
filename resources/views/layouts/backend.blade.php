@@ -14,6 +14,7 @@
     	<!-- Bootstrap core CSS -->
     	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
+		<link href="{{ asset('css/datatables.min.css') }}" rel="stylesheet">
     	<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
     </head>
 
@@ -49,5 +50,7 @@
 		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 		<script src="{{ asset('js/holder.min.js') }}"></script>
 		<script src="{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
+		<script src="{{ asset('js/datatables.min.js') }}"></script>
+		<script src="{{ asset('js/custom.js') }}"></script>
 	</body>
 </html>

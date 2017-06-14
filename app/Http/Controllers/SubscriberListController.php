@@ -128,6 +128,16 @@ class SubscriberListController extends Controller
 		$subscriberList->delete();
 		return redirect('lists');	
 	}
+	
+	public function subscribers($id)
+	{
+		$subscriberList = SubscriberList::find($id);
+		$subscribers = $subscriberList->subscribers;
+		return view('subscribers.index', [
+			'pageName' =>'subscribers',
+			'subscribers' => $subscribers
+		]);
+	}
 }
 
 ?>

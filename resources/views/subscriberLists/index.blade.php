@@ -8,7 +8,7 @@
 			<a class="btn btn-success" href="/lists/create">Add List</a>
 		</div>
 	</div>
-	<table class="table table-striped">
+	<table class="table table-striped datatable">
 		<thead>
 			<tr>
 				<th></th>

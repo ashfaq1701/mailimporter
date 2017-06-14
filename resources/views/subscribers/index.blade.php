@@ -8,7 +8,7 @@
 			<a class="btn btn-success" href="/subscribers/create">Add Subscriber</a>
 		</div>
 	</div>
-	<table class="table table-striped">
+	<table class="table table-striped datatable">
 		<thead>
 			<tr>
 				<th></th>

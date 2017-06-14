@@ -21,6 +21,7 @@ Route::post('/lists', 'SubscriberListController@store');
 Route::get('/lists/{id}', 'SubscriberListController@get');
 Route::post('/lists/{id}', 'SubscriberListController@update');
 Route::get('/lists/delete/{id}', 'SubscriberListController@delete');
+Route::get('/lists/{id}/subscribers', 'SubscriberListController@subscribers');
 
 Route::get('/subscribers', 'SubscriberController@index');
 Route::get('/subscribers/create', 'SubscriberController@create');
