@@ -12,6 +12,9 @@ class EncryptCookies extends BaseEncrypter
      * @var array
      */
     protected $except = [
-        //
+        'requestTokenSecret',
+    	'callbackUrl',
+    	'aweber-access-token',
+    	'aweber-access-token-secret'
     ];
 }

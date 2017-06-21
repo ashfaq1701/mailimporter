@@ -15,6 +15,7 @@ Route::get('/', 'DashboardController@getDashboard');
 Route::get('/importer', 'ImportController@getImport');
 Route::post('/importer/mailchimp', 'ImportController@postImportMailchimp');
 Route::post('/importer/getresponse', 'ImportController@postImportGetResponse');
+Route::get('/importer/aweber', 'ImportController@getImportAweber');
 
 Route::get('/lists', 'SubscriberListController@index');
 Route::get('/lists/create', 'SubscriberListController@create');
