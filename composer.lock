@@ -4,9 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b93429135bca247c31299065d306017a",
-    "content-hash": "911c2a1d7686512c88aba6d6da667259",
+    "hash": "d1d73bf211d86d368899b5b95a2a00b3",
+    "content-hash": "3f31d9318a25d00685f0474e95233dc5",
     "packages": [
+        {
+            "name": "aweber/aweber",
+            "version": "v1.1.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aweber/AWeber-API-PHP-Library.git",
+                "reference": "8a825ae6d5efa6a59e08629cc3303bf200f0913e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aweber/AWeber-API-PHP-Library/zipball/8a825ae6d5efa6a59e08629cc3303bf200f0913e",
+                "reference": "8a825ae6d5efa6a59e08629cc3303bf200f0913e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "bamboohr/phpcs": "^0.1.4",
+                "mayflower/php-codebrowser": "^1.1",
+                "pdepend/pdepend": "^2.2",
+                "php-di/phpdoc-reader": "^2.0",
+                "phpdocumentor/phpdocumentor": "^2.9",
+                "phploc/phploc": "^3.0",
+                "phpmd/phpmd": "^2.4",
+                "phpunit/phpunit": "^5.6",
+                "sebastian/phpcpd": "^2.0",
+                "squizlabs/php_codesniffer": "^2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "aweber_api/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "The official AWeber API client library.",
+            "homepage": "https://www.aweber.com",
+            "keywords": [
+                "api",
+                "client",
+                "email"
+            ],
+            "time": "2016-12-16 20:06:45"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -148,6 +193,53 @@
                 "parser"
             ],
             "time": "2017-03-29 16:04:15"
+        },
+        {
+            "name": "getresponse/getresponse",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GetResponse/getresponse-api-php.git",
+                "reference": "a33b1081eeb7c0937e46383344068a2a6e847ce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GetResponse/getresponse-api-php/zipball/a33b1081eeb7c0937e46383344068a2a6e847ce5",
+                "reference": "a33b1081eeb7c0937e46383344068a2a6e847ce5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/GetResponseAPI3.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pawel Maslak",
+                    "email": "pawel.maslak@getresponse.com"
+                },
+                {
+                    "name": "Grzegorz Struczynski",
+                    "email": "grzegorz.struczynski@getresponse.com"
+                }
+            ],
+            "description": "GetResponse API v3 client library.",
+            "homepage": "https://github.com/GetResponse/getresponse-api-php",
+            "keywords": [
+                "api",
+                "email",
+                "getresponse"
+            ],
+            "time": "2015-11-25 12:38:33"
         },
         {
             "name": "guzzlehttp/guzzle",
