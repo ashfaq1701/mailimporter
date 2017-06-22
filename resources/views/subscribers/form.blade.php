@@ -36,7 +36,14 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label" for="name">Name</label>
+					<input type="text" id="name" name="name" class="form-control" placeholder="Name" value="{{ !empty($subscriber) ? $subscriber->name : '' }}"/>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
 				<div class="form-group">
 					<label class="control-label" for="list">List</label>
 					<select id="list" name="list" class="form-control">

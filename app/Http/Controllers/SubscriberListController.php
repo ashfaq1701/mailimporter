@@ -42,28 +42,40 @@ class SubscriberListController extends Controller
 		$subject = $request->input('subject');
 		$language = $request->input('language');
 		
-		$contact = new Contact();
-		$contact->company = $company;
-		$contact->address1 = $address1;
-		$contact->address2 = $address2;
-		$contact->city = $city;
-		$contact->zip = $city;
-		$contact->country = $country;
-		$contact->phone = $phone;
-		$contact->save();
+		if(!empty($company) || !empty($address1) || !empty($address2) || !empty($city) || !empty($zip) || !empty($country) || !empty($phone))
+		{
+			$contact = new Contact();
+			$contact->company = $company;
+			$contact->address1 = $address1;
+			$contact->address2 = $address2;
+			$contact->city = $city;
+			$contact->zip = $zip;
+			$contact->country = $country;
+			$contact->phone = $phone;
+			$contact->save();
+		}
 		
-		$campaign = new Campaign();
-		$campaign->from_name = $fromName;
-		$campaign->from_email = $fromEmail;
-		$campaign->subject = $subject;
-		$campaign->language = $language;
-		$campaign->save();
+		if(!empty($fromName) || !empty($fromEmail) || !empty($subject) || !empty($language))
+		{
+			$campaign = new Campaign();
+			$campaign->from_name = $fromName;
+			$campaign->from_email = $fromEmail;
+			$campaign->subject = $subject;
+			$campaign->language = $language;
+			$campaign->save();
+		}
 		
 		$subscriberList = new SubscriberList();
 		$subscriberList->name = $name;
 		$subscriberList->permission_reminder = $permissionReminder;
-		$subscriberList->contact_id = $contact->id;
-		$subscriberList->campaign_id = $campaign->id;
+		if(!empty($contact))
+		{
+			$subscriberList->contact_id = $contact->id;
+		}
+		if(!empty($campaign))
+		{
+			$subscriberList->campaign_id = $campaign->id;
+		}
 		$subscriberList->save();
 		
 		return redirect('lists');
@@ -101,23 +113,29 @@ class SubscriberListController extends Controller
 		$subscriberList->permission_reminder = $permissionReminder;
 		$subscriberList->save();
 		
-		$contact = $subscriberList->contact;
-		$contact->company = $company;
-		$contact->address1 = $address1;
-		$contact->address2 = $address2;
-		$contact->city = $city;
-		$contact->state = $state;
-		$contact->zip = $zip;
-		$contact->country = $country;
-		$contact->phone = $phone;
-		$contact->save();
+		if(!empty($company) || !empty($address1) || !empty($address2) || !empty($city) || !empty($zip) || !empty($country) || !empty($phone))
+		{
+			$contact = $subscriberList->contact;
+			$contact->company = $company;
+			$contact->address1 = $address1;
+			$contact->address2 = $address2;
+			$contact->city = $city;
+			$contact->state = $state;
+			$contact->zip = $zip;
+			$contact->country = $country;
+			$contact->phone = $phone;
+			$contact->save();
+		}
 		
-		$campaign = $subscriberList->campaign;
-		$campaign->from_name = $fromName;
-		$campaign->from_email = $fromEmail;
-		$campaign->subject = $subject;
-		$campaign->language = $language;
-		$campaign->save();
+		if(!empty($fromName) || !empty($fromEmail) || !empty($subject) || !empty($language))
+		{
+			$campaign = $subscriberList->campaign;
+			$campaign->from_name = $fromName;
+			$campaign->from_email = $fromEmail;
+			$campaign->subject = $subject;
+			$campaign->language = $language;
+			$campaign->save();
+		}
 		
 		return redirect('lists');
 	}

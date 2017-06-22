@@ -63,9 +63,13 @@ class ImportController extends Controller
 		}
 		$aweber->adapter->debug = false;
 		$account = $aweber->getAccount($request->cookie('aweber-access-token'), $request->cookie('aweber-access-token-secret'));
-		$aweberImporter = new AweberImporter($account);
-		$result = $aweberImporter->importContacts();
-		return json_encode($result);
+		$aweberImporter = new Aweber($account);
+		$aweberImporter->importContacts();
+		$alert = [
+			'type' => 'success',
+			'message' => 'Your contacts were successfully imported from Aweber'
+		];
+		return view('dashboard.dashboard', ['pageName' => 'importer', 'alert' => $alert]);
 	}
 }
 

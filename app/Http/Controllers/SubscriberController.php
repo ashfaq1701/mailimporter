@@ -33,12 +33,14 @@ class SubscriberController extends Controller
 		$status = $request->input('status');
 		$firstName = $request->input('first_name');
 		$lastName = $request->input('last_name');
+		$name = $request->input('name');
 		$listId = $request->input('list');
 		
 		$subscriber = new Subscriber();
 		$subscriber->email = $email;
 		$subscriber->first_name = $firstName;
 		$subscriber->last_name = $lastName;
+		$subscriber->name = $name;
 		if(!empty($listId))
 		{
 			$subscriber->list_id = $listId;
@@ -64,12 +66,14 @@ class SubscriberController extends Controller
 		$status = $request->input('status');
 		$firstName = $request->input('first_name');
 		$lastName = $request->input('last_name');
+		$name = $request->input('name');
 		$listId = $request->input('list');
 		
 		$subscriber = Subscriber::find($id);
 		$subscriber->email = $email;
 		$subscriber->first_name = $firstName;
 		$subscriber->last_name = $lastName;
+		$subscriber->name = $name;
 		if(!empty($listId))
 		{
 			$subscriber->list_id = $listId;

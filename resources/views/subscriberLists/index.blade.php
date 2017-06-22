@@ -28,8 +28,8 @@
 				</td>
 				<td>{{ $subscriberList->name }}</td>
 				<td>{{ $subscriberList->permission_reminder }}</td>
-				<td>{{ $subscriberList->campaign->from_name }}</td>
-				<td>{{ $subscriberList->campaign->from_email }}</td>
+				<td>{{ !empty($subscriberList->campaign) ? $subscriberList->campaign->from_name : '' }}</td>
+				<td>{{ !empty($subscriberList->campaign) ? $subscriberList->campaign->from_email : '' }}</td>
 				<td><a href="/lists/{{ $subscriberList->id }}/subscribers">Subscribers</a></td>
 			</tr>
 			@endforeach

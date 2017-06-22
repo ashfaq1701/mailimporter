@@ -15,6 +15,7 @@
 				<th>Email</th>
 				<th>First Name</th>
 				<th>Last Name</th>
+				<th>Name</th>
 				<th>List</th>
 			</tr>
 		</thead>
@@ -28,6 +29,7 @@
 				<td>{{ $subscriber->email }}</td>
 				<td>{{ $subscriber->first_name }}</td>
 				<td>{{ $subscriber->last_name }}</td>
+				<td>{{ $subscriber->name }}</td>
 				<td><a href="/lists/{{ $subscriber->subscriberList->id }}">List</a></td>
 			</tr>
 			@endforeach
